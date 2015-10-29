@@ -1,0 +1,32 @@
+{
+  "name": "njob",
+  "version": "0.0.1",
+  "description": "a distributed job manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denghongcai/njob.git"
+  },
+  "keywords": [
+    "job"
+  ],
+  "author": "Hongcai Deng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/denghongcai/njob/issues"
+  },
+  "homepage": "https://github.com/denghongcai/njob#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "deep-extend": "^0.4.0",
+    "eslint": "^1.7.3",
+    "ioredis": "^1.10.0",
+    "lodash": "^3.10.1",
+    "node-uuid": "^1.4.3",
+    "timeout-callback": "0.0.4",
+    "tracer": "^0.8.1"
+  }
+}
