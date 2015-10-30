@@ -8,7 +8,7 @@
   },
   "scripts": {
     "client": "node build/bin/index.js client",
-    "prepublish": "babel . -i build --source-maps --out-dir build",
+    "prepublish": "babel ./ --ignore \"@(node_modules|build|doc)/**\" --source-maps --out-dir build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/denghongcai/njob#readme",
   "dependencies": {
+    "babel-cli": "^6.0.12",
     "commander": "^2.9.0",
     "deep-extend": "^0.4.0",
     "eslint": "^1.7.3",
@@ -36,6 +37,13 @@
     "tracer": "^0.8.1"
   },
   "devDependencies": {
-    "babel": "^6.0.12"
+    "babel-cli": "^6.0.0"
+  },
+  "babel": {
+    "ignore": [
+      "node_modules/**",
+      "build/**",
+      "doc/**"
+    ]
   }
 }
