@@ -69,8 +69,9 @@ class Broker extends EventEmitter {
   }
 
   updateJobStatus(id, status) {
+    status[0] = status[0].toUpperCase();
     let message = {
-      event: status,
+      status: `job${status}}`,
       job: {
         id: id
       }

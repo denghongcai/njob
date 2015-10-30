@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /*
  * Copyright (C) 2015 <Hongcai Deng>
  *
@@ -7,10 +8,10 @@
 
 'use strict';
 
-import Server from './modules/server';
+import Server from './../modules/server';
 import program from 'commander';
-import config from './config';
-import {version} from '../package.json';
+import config from './../config';
+import {version} from '../../package.json';
 
 program
   .version(version)

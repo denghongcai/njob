@@ -31,7 +31,7 @@ class RedisBroker extends Broker {
       });
       this.redisSub.on('message', (channel, message) => {
         this.emit(message.uuid, JSON.parse(message));
-        Parser.parse.call(this, channel.substring(4), message);
+        Parser.parse.call(this, channel.substring(4), message, this.respondWrap(message.uuid));
       });
     });
   }
@@ -41,13 +41,21 @@ class RedisBroker extends Broker {
     message.uuid = UUID.v1();
     return new Promise((resolve, reject) => {
       this.redis.publish(channel, JSON.stringify(message));
-      let callback = TimeoutCallback(3000, (err) => {
+      let callback = TimeoutCallback(3000, (err, message) => {
         if (err) {
           reject(err);
         }
-        resolve();
+        resolve(message);
       });
       this.once(message.uuid, callback);
     });
+  }
+
+  respondWrap(uuid) {
+    return (message, channel) => {
+      message.uuid = uuid;
+      channel = `njob-${channel}`;
+      this.redis.publish(channel, JSON.stringify(message));
+    }
   }
 }
