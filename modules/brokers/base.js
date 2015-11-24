@@ -7,14 +7,14 @@
 
 'use strict';
 
-import EventEmitter from 'events';
+import {EventEmitter2} from 'eventemitter2';
 import * as CONSTANTS from '../constants';
 
 export default
 
-class Broker extends EventEmitter {
+class Broker extends EventEmitter2 {
   constructor(url) {
-    super();
+    super({wildcard: true});
     this.url = url;
   }
 

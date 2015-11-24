@@ -38,7 +38,7 @@ class Parser {
       case CONSTANTS.ACTION_REGISTER_JOB:
         this.emit(CONSTANTS.EVENT_REGISTER_JOB, message, respond);
         break;
-      case CONSTANTS.ACTION.ACTION_QUERY_REGISTERED_JOB:
+      case CONSTANTS.ACTION_QUERY_REGISTERED_JOB:
         this.emit(CONSTANTS.EVENT_QUERY_REGISTERED_JOB, respond);
         break;
       case CONSTANTS.ACTION_GET_JOBS:

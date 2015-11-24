@@ -48,7 +48,7 @@ export default class Server {
       log.debug([...this.registeredJobs])
     });
 
-    this.broker.on(CONSTANTS.EVENT.EVENT_GET_JOBS, respond => {
+    this.broker.on(CONSTANTS.EVENT_GET_JOBS, respond => {
       respond({data: [...this.activatedJobs]}, 'client');
       log.debug([...this.activatedJobs]);
     });

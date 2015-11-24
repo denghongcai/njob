@@ -31,7 +31,7 @@ class RedisBroker extends Broker {
       });
       this.redisSub.on('message', (channel, message) => {
         this.emit(message.uuid, JSON.parse(message));
-        Parser.parse.call(this, channel.substring(4), message, this.respondWrap(message.uuid));
+        Parser.parse.call(this, role, message, this.respondWrap(message.uuid));
       });
     });
   }

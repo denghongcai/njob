@@ -8,7 +8,7 @@
 'use strict';
 
 export const ACTION_REGISTER_JOB = 'registerJob';
-export const ACTION_QUERY_REGISTERED_JOB = 'queryRegisteredJob';
+export const ACTION_QUERY_REGISTERED_JOB = 'queryRegisteredJobs';
 export const ACTION_GET_JOBS = 'getJobs';
 export const ACTION_SEND_JOB = 'sendJob';
 export const ACTION_QUERY_JOB_STATUS = 'queryJobStatus';

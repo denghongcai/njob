@@ -26,10 +26,12 @@
   },
   "homepage": "https://github.com/denghongcai/njob#readme",
   "dependencies": {
-    "babel-cli": "^6.0.12",
+    "body-parser": "^1.14.1",
     "commander": "^2.9.0",
     "deep-extend": "^0.4.0",
     "eslint": "^1.7.3",
+    "eventemitter2": "^0.4.14",
+    "express": "^4.13.3",
     "ioredis": "^1.10.0",
     "lodash": "^3.10.1",
     "node-uuid": "^1.4.3",
@@ -37,7 +39,7 @@
     "tracer": "^0.8.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.0.0"
+    "babel": "^5.0.0"
   },
   "babel": {
     "ignore": [
